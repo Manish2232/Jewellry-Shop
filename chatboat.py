@@ -4,7 +4,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
-model = ChatGoogleGenerativeAI(model = 'gemini-2.5-flash')
+model = ChatGoogleGenerativeAI(model = 'gemini-2.5-flash-lite')
 
 prompt = ChatPromptTemplate.from_messages([
     (
