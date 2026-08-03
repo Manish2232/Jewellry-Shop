@@ -4,7 +4,7 @@ from pathlib import Path
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_mistralai import ChatMistralAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
@@ -376,7 +376,7 @@ if not logo_b64:
 # =========================================================
 @st.cache_resource
 def load_model():
-    return ChatMistralAI(model="mistral-small-2506")
+    return ChatGoogleGenerativeAI(model = 'gemini-2.5-flash')
 
 
 model = load_model()
